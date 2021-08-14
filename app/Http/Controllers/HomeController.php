@@ -28,4 +28,14 @@ class HomeController extends Controller
         $districts = District::simplePaginate(10);
         return view('home', compact('districts'));
     }
+
+    public function showToken()
+    {
+        return view('token');
+    }
+
+    public function showDocs()
+    {
+        return view('docs');
+    }
 }
