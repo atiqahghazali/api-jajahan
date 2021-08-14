@@ -20,3 +20,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/token', [App\Http\Controllers\HomeController::class, 'showToken'])->name('show:token');
+Route::get('/docs', [App\Http\Controllers\HomeController::class, 'showDocs'])->name('show:docs');
