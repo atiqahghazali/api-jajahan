@@ -5,26 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header">{{ __('Data') }}</div>
-                <div class="card-body">
+                <div class="card-body pt-5">
                     <table class="table"> 
                         <thead>
                             <tr>
@@ -36,9 +17,9 @@
                         <tbody>
                             @foreach($districts as $district)
                             <tr>
-                                <td>{{$district->name}}</td>
                                 <td>{{$district->state->name}}</td>
-                                <td>{{$district->subdistricts}}</td>
+                                <td>{{$district->name}}</td>
+                                <td>{{$district->subdistricts()->select('name')->get()}}</td>
                             </tr>
                             @endforeach
                         </tbody>
