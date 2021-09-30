@@ -67,6 +67,16 @@
                                 </p>
                             </div>
                         </div>
+
+                        <div class="col-md-12 row-block">
+
+                                     <a href="{{ url('/redirect') }}" class="btn btn-lg-primary btn-block ">
+
+                                     <strong>Login With Google</strong>
+
+                                     </a> 
+
+                                 </div>
                     </form>
                 </div>
             </div>
