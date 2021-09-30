@@ -15,6 +15,10 @@ class AddIsAdminToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('is_admin')->after('name')->nullable();
+            $table->string('password')->nullable()->change();
+            $table->string('google_id')->after('api_token')->nullable();
+             $table->string('avatar')->after('google_id')->nullable();
+             $table->string('avatar_original')->after('avatar')->nullable();
         });
     }
 
