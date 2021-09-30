@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\District;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
 
 class HomeController extends Controller
@@ -26,6 +27,16 @@ class HomeController extends Controller
     public function index()
     {
         $districts = District::simplePaginate(10);
+
+        $group = DB::table('sub_districts')
+        ->join('districts', 'sub_districts.district_id', '=', 'districts.id')
+        ->join('states', 'districts.state_id', '=', 'states.id')
+        ->select('sub_districts.*')
+        ->get()
+        ->groupBy(['states.name', 'district_id']);
+
+        // dd($group);
+
         return view('home', compact('districts'));
     }
 
@@ -34,8 +45,9 @@ class HomeController extends Controller
         return view('token');
     }
 
-    public function showDocs()
+    public function adminHome()
     {
-        return view('docs');
+        return view('admin.home');
     }
+
 }
