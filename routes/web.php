@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\State;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +48,11 @@ Route::get('admin/home', [App\Http\Controllers\HomeController::class, 'adminHome
 //     });
 
 // });
+
+Route::any('/search',function(){
+    $q = Request::input( 'q' );
+    $state = State::where('name','LIKE','%'.$q.'%')->get();
+    if(count($state) > 0)
+        return view('data')->withDetails($state)->withQuery ( $q );
+    else return view ('data')->withMessage('No Details found. Try to search again !');
+});
