@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Get List of State') }}</div>
                 <div class="card-body">
@@ -108,7 +108,7 @@
     </div>
     <br>
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Get Full Address') }}</div>
                 <div class="card-body">
