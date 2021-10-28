@@ -28,4 +28,8 @@ Route::prefix('v1')->middleware('auth:api')->group(function(){
 
     Route::get('/address','App\Http\Controllers\API\AddressController@index');
 
+    Route::get('/duns','App\Http\Controllers\API\DunController@index');
+
+    Route::get('/parliaments','App\Http\Controllers\API\ParliamentController@index');
+
 });

@@ -21,4 +21,14 @@ class State extends Model
     {
         return $this->hasMany(District::class);
     }
+
+    public function duns()
+    {
+        return $this->hasMany(Dun::class);
+    }
+
+    public function parliaments()
+    {
+        return $this->hasMany(Parliament::class);
+    }
 }
