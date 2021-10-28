@@ -19,7 +19,11 @@
                             <tr>
                                 <td>{{$district->state->name}}</td>
                                 <td>{{$district->name}}</td>
-                                <td>{{$district->subdistricts()->select('name')->get()}}</td>
+                                <td>
+                                    @foreach($district->subdistricts()->select('name')->get() as $subdistrict)
+                                        {{$subdistrict->name}},
+                                    @endforeach
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

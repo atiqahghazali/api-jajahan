@@ -5,9 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
+                <div class="card-body pt-5">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -67,7 +65,15 @@
                                     {{ __('Register') }}
                                 </button>
                             </div>
+                            <div class="col-md-6 offset-md-4 pt-2">
+                                <p>Already have an account ?
+                                    <a class="btn btn-link" href="{{ route('login') }}">
+                                        {{ __('Sign in') }}
+                                    </a>
+                                </p>
+                            </div>
                         </div>
+                        
                     </form>
                 </div>
             </div>

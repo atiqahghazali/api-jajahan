@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call([StateSeeder::class]);
         $this->call([DistrictSeeder::class]);
         $this->call([SubDistrictSeeder::class]);
+        $this->call([ParliamentSeeder::class]);
+        $this->call([DunSeeder::class]);
     }
 }
