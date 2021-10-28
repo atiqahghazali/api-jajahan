@@ -25,8 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $districts = District::simplePaginate(10);
-        return view('home', compact('districts'));
+        // $districts = District::simplePaginate(10);
+        // return view('home', compact('districts'));
+        return view('token');
     }
 
     public function showToken()
