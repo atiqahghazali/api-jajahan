@@ -11,7 +11,7 @@
                         {{ csrf_field() }}
                         <div class="input-group">
                             <input type="text" class="form-control" name="q"
-                                placeholder="Type any state name and hit enter key"> <span class="input-group-btn">
+                                placeholder="Type any state name and click enter key"> <span class="input-group-btn">
                                 <button type="submit" class="btn btn-default">
                                     <span class="glyphicon glyphicon-search"></span>
                                 </button>
