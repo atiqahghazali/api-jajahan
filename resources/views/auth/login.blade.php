@@ -5,7 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-body pt-5">
+                <div class="card-header">{{ __('Login') }}</div>
+
+                <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -54,29 +56,21 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Password ?') }}
-                                    </a>
-                                @endif
                                 <br><br>
-                                <p>Don't have an account ?
+                                @if (Route::has('password.request'))
+                                    <p>Forgot Your Password?
+                                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                            {{ __('Click here to reset') }}
+                                        </a>
+                                    </p>
+                                @endif
+                                <p>Not Registered?
                                     <a class="btn btn-link" href="{{ route('register') }}">
-                                        {{ __('Sign up') }}
+                                        {{ __('Create an acount') }}
                                     </a>
                                 </p>
                             </div>
                         </div>
-
-                        <div class="col-md-12 row-block">
-
-                                     <a href="{{ url('/redirect') }}" class="btn btn-lg-primary btn-block ">
-
-                                     <strong>Login With Google</strong>
-
-                                     </a> 
-
-                                 </div>
                     </form>
                 </div>
             </div>

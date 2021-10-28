@@ -29,19 +29,6 @@ class SubDistrictController extends Controller
         ]);
     }
 
-
-    public function getDetailByID(Request $request)
-    {
-        $subdistrict = SubDistrict::find($request->id);
-        //return to json
-        return response()->json([
-            'success' => true,
-            'message' => 'Successsfully fetch all subdistricts',
-            'data' => $subdistrict,
-        ]);
-
-    }
-
     /**
      * Show the form for creating a new resource.
      *

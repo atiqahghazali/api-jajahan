@@ -26,8 +26,6 @@ Route::prefix('v1')->middleware('auth:api')->group(function(){
 
     Route::get('/subdistricts','App\Http\Controllers\API\SubDistrictController@index');
 
-    Route::get('/get-subdistrict-by-id','App\Http\Controllers\API\SubDistrictController@getDetailByID');
-
     Route::get('/address','App\Http\Controllers\API\AddressController@index');
 
 });
