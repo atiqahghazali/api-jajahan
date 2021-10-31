@@ -80,6 +80,7 @@
                 <div class="card-header">{{ __('Get List of SubDistrict') }}</div>
 
                 <div class="card-body">
+                    <u><b>LIST OF ALL SUBDISTRICTS</b></u><br><br>
                     <mark>API Call: </mark>
                     <p>$url = 'http://jajahan.atiqahghazali.site/api/v1/subdistricts';<br>
                         $response = Http::withHeaders([<br>
@@ -100,6 +101,27 @@
                             "name": "CHAAH BAHRU",
                             "district_id": "0101"
                         }...
+                    ]
+                    </p>
+                    <br>
+                    <u><b>NAME OF SUBDISTRICT BY ID</b></u><br><br>
+                    <mark>API Call: </mark>
+                    <p>$url = 'http://jajahan.atiqahghazali.site/api/v1/subdistrict-name-by-id';<br>
+                        $response = Http::withHeaders([<br>
+                            'Accept' => 'application/json',<br>
+                            'Authorization' => 'Bearer [token]'<br>
+                        ])->get($url,[
+                            'id' => 10101
+                        ]);
+                    </p>
+                    <mark>Sample Result</mark>
+                    <p>
+                    [
+                        {
+                            "success": "true",
+                            "message": "Successsfully fetch subdistrict name",
+                            "data": "BAGAN"
+                        }
                     ]
                     </p>
                 </div>

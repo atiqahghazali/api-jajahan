@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\API;
-use App\Http\Controllers\Controller;
+use App\Models\District;
 use App\Models\SubDistrict;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class SubDistrictController extends Controller
 {
@@ -26,6 +27,18 @@ class SubDistrictController extends Controller
             'success' => true,
             'message' => 'Successsfully fetch all subdistricts',
             'data' => $subdistricts,
+        ]);
+    }
+
+    public function nameById(Request $request)
+    {
+        $subdistrict = Subdistrict::find($request->id)->value('name');
+        
+        //return to json
+        return response()->json([
+            'success' => true,
+            'message' => 'Successsfully fetch subdistrict name',
+            'data' => $subdistrict,
         ]);
     }
 
