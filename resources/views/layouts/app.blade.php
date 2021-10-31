@@ -20,6 +20,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+<style>
+.footer {
+   position:fixed;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:white;
+}
+</style>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -105,6 +114,13 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="footer" style="text-align: center;">
+            <div>
+            <b>Version</b> 1.0.5
+            </div>
+            Last update on November 2021
+        </footer>
     </div>
 </body>
 </html>
