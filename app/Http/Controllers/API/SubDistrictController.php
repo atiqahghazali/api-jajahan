@@ -32,7 +32,7 @@ class SubDistrictController extends Controller
 
     public function nameById(Request $request)
     {
-        $subdistrict = Subdistrict::find($request->id)->value('name');
+        $subdistrict = Subdistrict::find($request->id)->name;
         
         //return to json
         return response()->json([
