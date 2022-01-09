@@ -9,6 +9,8 @@ class SubDistrict extends Model
 {
     use HasFactory;
 
+    protected $table = "sub_districts" ;
+
     protected $fillable = [
         'name',
         'district_id'

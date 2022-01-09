@@ -46,4 +46,13 @@ Route::group([
         Route::get('/district/delete/{district}', 'DistrictController@destroy')->name('delete');
     });
 
+    Route::group([
+        'as' => 'subdistrict-',
+    ], function(){
+        Route::get('/subdistrict/list', 'SubdistrictController@index')->name('index');
+        Route::post('/subdistrict/update/{subdistrict}', 'SubdistrictController@update')->name('update');
+        Route::post('/subdistrict/store', 'SubdistrictController@store')->name('store');
+        Route::get('/subdistrict/delete/{subdistrict}', 'SubdistrictController@destroy')->name('delete');
+    });
+
 });

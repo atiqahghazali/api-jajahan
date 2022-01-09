@@ -97,7 +97,7 @@
                                     <a class="dropdown-item" href="{{ route('district-index') }}" >
                                         {{ __('District') }}
                                     </a>
-                                    <a class="dropdown-item" href="" >
+                                    <a class="dropdown-item" href="{{ route('subdistrict-index') }}" >
                                         {{ __('SubDistrict') }}
                                     </a>
 
