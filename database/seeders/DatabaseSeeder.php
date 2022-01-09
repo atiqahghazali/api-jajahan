@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call([SubDistrictSeeder::class]);
         $this->call([ParliamentSeeder::class]);
         $this->call([DunSeeder::class]);
+        $this->call([AdminSeeder::class]);
     }
 }
