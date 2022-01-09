@@ -68,7 +68,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-12 row-block">
+                        <!-- <div class="col-md-12 row-block">
 
                                      <a href="{{ url('/redirect') }}" class="btn btn-lg-primary btn-block ">
 
@@ -76,7 +76,7 @@
 
                                      </a> 
 
-                                 </div>
+                                 </div> -->
                     </form>
                 </div>
             </div>
