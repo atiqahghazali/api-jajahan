@@ -117,9 +117,9 @@
 
         <footer class="footer" style="text-align: center;">
             <div>
-            <b>Version</b> 1.0.5
+            <b>Version</b> 2.0
             </div>
-            Last update on November 2021
+            Last update on January 2022
         </footer>
     </div>
 </body>
