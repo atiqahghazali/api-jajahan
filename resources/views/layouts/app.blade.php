@@ -87,6 +87,23 @@
                                 <a class="nav-link" href="{{ route('show:token') }}">{{ __('Token') }}</a>
                             </li>
                             @endcan
+                            @if(auth()->user()->is_admin == '1')
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    Maintenance
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('district-index') }}" >
+                                        {{ __('District') }}
+                                    </a>
+                                    <a class="dropdown-item" href="" >
+                                        {{ __('SubDistrict') }}
+                                    </a>
+
+                                </div>
+                            </li>
+                            @endif
                             
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
