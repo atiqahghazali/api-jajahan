@@ -23,7 +23,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/getallstate.png')}}">
+                    <img src="{{asset('/images/getallstate.PNG')}}">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/getalldistrict.png')}}">
+                    <img src="{{asset('/images/getalldistrict.PNG')}}">
                 </div>
             </div>
         </div>
@@ -79,7 +79,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/getallsubdistrict.png')}}">
+                    <img src="{{asset('/images/getallsubdistrict.PNG')}}">
                     <br><br>
                     <u><b>NAME OF SUBDISTRICT BY ID</b></u><br><br>
                     <table>
@@ -102,7 +102,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/subdistrictname.png')}}">
+                    <img src="{{asset('/images/subdistrictname.PNG')}}">
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/address.png')}}">
+                    <img src="{{asset('/images/address.PNG')}}">
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/dun.png')}}">
+                    <img src="{{asset('/images/dun.PNG')}}">
                 </div>
             </div>
         </div>
@@ -187,7 +187,7 @@
                     </table>
                     <mark>Return Example</mark>
                     <br>
-                    <img src="{{asset('/images/parliament.png')}}">
+                    <img src="{{asset('/images/parliament.PNG')}}">
                 </div>
             </div>
         </div>
