@@ -13,7 +13,7 @@ class ParliamentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         if($request->search){
             $parliaments = Parliament::where('name','LIKE','%'.$request->search.'%')->all();

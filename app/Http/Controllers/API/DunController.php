@@ -13,7 +13,7 @@ class DunController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         if($request->search){
             $duns = Dun::where('name','LIKE','%'.$request->search.'%')->all();
