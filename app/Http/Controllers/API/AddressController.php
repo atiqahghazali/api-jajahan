@@ -21,7 +21,7 @@ class AddressController extends Controller
         //return to json
         return response()->json([
             'success' => true,
-            'message' => 'Successsfully fetch all users',
+            'message' => 'Successsfully fetch semi address',
             'data' => $address,
         ]);
     }
